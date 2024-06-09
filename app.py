@@ -32,9 +32,8 @@ llm = load_language_model()
 def generate_story(prompt):
     answers = []
     prompt = f''' '{prompt}' 
-    1.give short story with 200 words 
-    2. give 3 image description ideas to generate images for this story
-    3. generate 5 MCQs with options and answer '''
+    1.give short story with 200 words. 
+    2. generate 5 MCQs with options and answer .'''
     story = llm.invoke(prompt)
     print(story+"\n")
     story = story+"\n"
